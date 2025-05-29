@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Heartfelt Apology 💙</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1a237e 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            color: white;
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite;
+        }
+        
+        .star:nth-child(odd) {
+            animation-delay: 1s;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+        
+        .floating-icon {
+            position: absolute;
+            font-size: 24px;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.7;
+        }
+        
+        .floating-icon:nth-child(odd) {
+            animation-delay: 3s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #ffb3d9;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            color: #e1f5fe;
+            opacity: 0.9;
+        }
+        
+        .apology-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .apology-letter h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ffb3d9;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .apology-letter .letter-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f8f9fa;
+            text-align: justify;
+        }
+        
+        .apology-letter .signature {
+            text-align: right;
+            margin-top: 20px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #ffb3d9;
+        }
+        
+        .quotes-section {
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .quotes-section h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ffb3d9;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .quote-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ffb3d9;
+            transition: transform 0.3s ease;
+        }
+        
+        .quote-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .quote-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #e1f5fe;
+            margin-bottom: 10px;
+        }
+        
+        .quote-author {
+            text-align: right;
+            color: #ffb3d9;
+            font-weight: 600;
+        }
+        
+        .promise-section {
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+        
+        .promise-section h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ffb3d9;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .promise-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .promise-list li {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .promise-list li:hover {
+            transform: translateX(10px);
+        }
+        
+        .promise-list i {
+            color: #ffb3d9;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .heart-button {
+            display: block;
+            margin: 40px auto;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #ff6b9d, #ff8cc8);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+        }
+        
+        .heart-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 157, 0.6);
+        }
+        
+        .heart-button i {
+            margin-right: 10px;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .apology-card {
+                padding: 25px;
+            }
+            
+            .apology-letter h2,
+            .quotes-section h2,
+            .promise-section h2 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+        
+        .moon {
+            position: fixed;
+            top: 50px;
+            right: 80px;
+            font-size: 60px;
+            color: #fff59d;
+            animation: moonGlow 3s ease-in-out infinite;
+            z-index: 3;
+        }
+        
+        @keyframes moonGlow {
+            0%, 100% { text-shadow: 0 0 20px #fff59d; }
+            50% { text-shadow: 0 0 40px #fff59d, 0 0 60px #fff59d; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="floating-elements" id="floatingElements"></div>
+    <div class="moon">🌙</div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>I'm Sorry, My Love 💕</h1>
+            <p>A heartfelt apology from your silly but loving boyfriend</p>
+        </div>
+        
+        <div class="apology-card">
+            <div class="apology-letter">
+                <h2><i class="fas fa-heart"></i> My Dearest Love <i class="fas fa-heart"></i></h2>
+                <div class="letter-content">
+                    <p>My beautiful angel, I know I've been incredibly silly again, and I can see how worried and frustrated you get when I don't take care of myself properly. I'm truly sorry for getting sick after sleeping with both the AC and fan on without a blanket – I know you've told me countless times to be more careful about this.</p>
+                    
+                    <p>You care so much about my health and wellbeing, and instead of listening to your loving advice, I went ahead and did exactly what you warned me not to do. I can only imagine how it must feel to see someone you love repeatedly making the same mistakes that could have been so easily avoided.</p>
+                    
+                    <p>I promise you, from the bottom of my heart, that I will be more mindful and responsible about my health. You deserve a boyfriend who listens to your concerns and takes better care of himself – not just for my own sake, but because I know how much it worries you when I'm unwell.</p>
+                    
+                    <p>Thank you for being patient with me, for caring so deeply, and for loving me even when I'm being irresponsible. I'm lucky to have someone who cares about me as much as you do. I love you more than words can express, and I'm sorry for causing you stress and worry.</p>
+                </div>
+                <div class="signature">
+                    Forever yours, <br>
+                    Your apologetic boyfriend 💙
+                </div>
+            </div>
+        </div>
+        
+        <div class="apology-card quotes-section">
+            <h2><i class="fas fa-quote-left"></i> Words from the Heart <i class="fas fa-quote-right"></i></h2>
+            
+            <div class="quote-card">
+                <div class="quote-text">"The best apology is changed behavior."</div>
+                <div class="quote-author">— Anonymous</div>
+            </div>
+            
+            <div class="quote-card">
+                <div class="quote-text">"Love means never having to say you're sorry... but I'm saying it anyway because I care about us."</div>
+                <div class="quote-author">— Your Loving Boyfriend</div>
+            </div>
+            
+            <div class="quote-card">
+                <div class="quote-text">"A sincere apology has three parts: I did it, I'm sorry, and I won't do it again."</div>
+                <div class="quote-author">— Anonymous</div>
+            </div>
+            
+            <div class="quote-card">
+                <div class="quote-text">"In love, sometimes saying sorry is not about being wrong, it's about valuing the relationship more than your ego."</div>
+                <div class="quote-author">— Unknown</div>
+            </div>
+        </div>
+        
+        <div class="apology-card promise-section">
+            <h2><i class="fas fa-pinky-promise"></i> My Promises to You <i class="fas fa-pinky-promise"></i></h2>
+            
+            <ul class="promise-list">
+                <li>
+                    <i class="fas fa-thermometer-half"></i>
+                    I promise to always use a blanket when sleeping with the AC or fan on
+                </li>
+                <li>
+                    <i class="fas fa-heart-pulse"></i>
+                    I will listen to your health advice and take it seriously
+                </li>
+                <li>
+                    <i class="fas fa-shield-heart"></i>
+                    I'll be more responsible about my health and wellbeing
+                </li>
+                <li>
+                    <i class="fas fa-baby"></i>
+                    I promise to be your "good boy" and make better choices
+                </li>
+                <li>
+                    <i class="fas fa-comments"></i>
+                    I'll communicate with you when I'm not feeling well instead of ignoring symptoms
+                </li>
+                <li>
+                    <i class="fas fa-spa"></i>
+                    I will prioritize self-care because I know it makes you happy when I'm healthy
+                </li>
+            </ul>
+        </div>
+        
+        <button class="heart-button" onclick="showLove()">
+            <i class="fas fa-heart"></i>
+            I Love You
+        </button>
+    </div>
+    
+    <script>
+        // Create twinkling stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numStars = 50;
+            
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = star.style.height = Math.random() * 3 + 1 + 'px';
+                star.style.animationDelay = Math.random() * 2 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Create floating elements
+        function createFloatingElements() {
+            const container = document.getElementById('floatingElements');
+            const icons = ['💕', '💙', '⭐', '🌟', '💖', '✨', '🌙', '💜'];
+            
+            for (let i = 0; i < 15; i++) {
+                const element = document.createElement('div');
+                element.className = 'floating-icon';
+                element.textContent = icons[Math.floor(Math.random() * icons.length)];
+                element.style.left = Math.random() * 100 + '%';
+                element.style.top = Math.random() * 100 + '%';
+                element.style.animationDelay = Math.random() * 6 + 's';
+                element.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                container.appendChild(element);
+            }
+        }
+        
+        // Show love message
+        function showLove() {
+            const messages = [
+                "I love you so much! 💕",
+                "You're my everything! 💙",
+                "Thank you for being patient with me! ✨",
+                "I promise to be better! 🌟",
+                "You're the best girlfriend ever! 💖"
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            
+            // Create floating message
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = randomMessage;
+            messageDiv.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(45deg, #ff6b9d, #ff8cc8);
+                color: white;
+                padding: 20px 30px;
+                border-radius: 50px;
+                font-size: 1.5rem;
+                font-weight: 600;
+                z-index: 1000;
+                box-shadow: 0 10px 30px rgba(255, 107, 157, 0.5);
+                animation: popIn 0.5s ease-out;
+            `;
+            
+            document.body.appendChild(messageDiv);
+            
+            setTimeout(() => {
+                messageDiv.style.animation = 'fadeOut 0.5s ease-out forwards';
+                setTimeout(() => {
+                    document.body.removeChild(messageDiv);
+                }, 500);
+            }, 2000);
+        }
+        
+        // Add CSS animations for popup
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes popIn {
+                0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+                100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            }
+            
+            @keyframes fadeOut {
+                0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+                100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            createStars();
+            createFloatingElements();
+        });
+        
+        // Add some interactive elements
+        document.addEventListener('mousemove', function(e) {
+            const moon = document.querySelector('.moon');
+            const rect = moon.getBoundingClientRect();
+            const moonX = rect.left + rect.width / 2;
+            const moonY = rect.top + rect.height / 2;
+            
+            const deltaX = e.clientX - moonX;
+            const deltaY = e.clientY - moonY;
+            
+            const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+            
+            if (distance < 100) {
+                moon.style.transform = `translate(${deltaX * 0.1}px, ${deltaY * 0.1}px)`;
+            } else {
+                moon.style.transform = 'translate(0, 0)';
+            }
+        });
+    </script>
+</body>
+</html>
